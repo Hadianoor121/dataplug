@@ -38,7 +38,9 @@ class Map extends CI_Controller {
      * @return  array An array of form heading and its data
      * @author UbaidUllah Balti <ubaidcskiu@gmail.com>
      */
-    public function get_heading_data_by_category($forms_list, $to_date, $from_date, $category_name, $filter_attribute_search, $town_filter, $posted_filters, $search_text = null, $export = null) {
+    public function get_heading_data_by_category($forms_list, $to_date,
+	$from_date, $category_name, $filter_attribute_search,
+	$town_filter, $posted_filters, $search_text = null, $export = null) {
         $form_id = $forms_list[0]['form_id'];
         $data['form_id'] = $form_id;
         $selected_form = $this->form_model->get_form($form_id);
@@ -294,7 +296,7 @@ class Map extends CI_Controller {
     //new instance
     public function paginated_ajax_data_posted() {
         $slug = $_GET['form_id'];
-        $to_date = $_GET['to_date'];
+        $to_date = $_GET['to_dat41e'];
         $from_date = $_GET['from_date'];
         $district = $_GET['district'];
         $selected_dc = $_GET['selected_dc'];
@@ -1731,7 +1733,8 @@ class Map extends CI_Controller {
                                 $exist_alpha[$first_char] = '1';
                                 $pin_name = $first_char . '1';
                             }
-                            $pin_exist_for_cat = array_merge($pin_exist_for_cat, array($valueforarray => $pin_name));
+                            $pin_exist_for_cat = array_merge($pin_exist_for_cat,
+							array($valueforarray => $pin_name));
                         } else {
                             if (array_key_exists($valueforarray, $pin_exist_for_cat)) {
                                 $pin_name = $pin_exist_for_cat[$valueforarray];
