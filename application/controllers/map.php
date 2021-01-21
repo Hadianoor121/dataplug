@@ -296,7 +296,7 @@ class Map extends CI_Controller {
     //new instance
     public function paginated_ajax_data_posted() {
         $slug = $_GET['form_id'];
-        $to_date = $_GET['to_dat41e'];
+        $to_date = $_GET['to_date'];
         $from_date = $_GET['from_date'];
         $district = $_GET['district'];
         $selected_dc = $_GET['selected_dc'];
